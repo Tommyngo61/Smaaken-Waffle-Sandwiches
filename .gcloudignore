@@ -1,0 +1,12 @@
+# Without this file gcloud falls back to .gitignore, which excludes public/ -
+# the built site Express actually serves. That would deploy an empty site.
+# public/ is deliberately NOT listed here.
+
+.git
+node_modules
+frontend
+.env
+.env.local
+*.log
+.DS_Store
+README.md
