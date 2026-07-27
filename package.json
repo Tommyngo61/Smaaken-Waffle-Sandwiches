@@ -1,0 +1,20 @@
+{
+  "name": "smaaken-waffle-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smaaken Waffle Sandwiches client site - managed via Tablecloth",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend",
+    "frontend:install": "npm install --prefix frontend",
+    "frontend:dev": "npm run dev --prefix frontend",
+    "frontend:build": "npm run build --prefix frontend"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

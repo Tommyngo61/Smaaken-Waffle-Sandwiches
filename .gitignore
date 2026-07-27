@@ -1,0 +1,13 @@
+node_modules/
+frontend/node_modules/
+
+# Build output only (Vite writes here via outDir). Anchored to repo root with
+# a leading slash so it does NOT also match frontend/public/, which holds any
+# SOURCE images that must be committed.
+/public/
+
+# Never commit env files
+.env
+.env.local
+frontend/.env
+frontend/.env.local

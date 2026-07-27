@@ -1,0 +1,80 @@
+{
+  "template": "food-menu",
+  "meta": {
+    "title": "Smaaken Waffle Sandwiches | Hawthorne Asylum, Portland OR",
+    "description": "Savory and sweet waffle sandwiches at the Hawthorne Asylum food cart pod in Portland, OR. Order ahead for pickup."
+  },
+  "hero": {
+    "headline": "Smaaken Waffle Sandwiches",
+    "sub": "Savory & sweet waffle sandwiches at Hawthorne Asylum"
+  },
+  "business": {
+    "name": "Smaaken Waffle Sandwiches",
+    "phone": "(503) 555-0142",
+    "phoneHref": "+15035550142",
+    "address": "Hawthorne Asylum food cart pod, 1080 SE Madison St, Portland, OR 97214",
+    "mapQuery": "Hawthorne Asylum food carts, 1080 SE Madison St, Portland, OR 97214",
+    "instagram": "https://instagram.com/smaakenwaffles"
+  },
+  "announcement": { "enabled": false, "text": "" },
+  "hours": [
+    { "day": "Monday", "open": "", "close": "", "closed": true },
+    { "day": "Tuesday", "open": "08:00", "close": "17:00", "closed": false },
+    { "day": "Wednesday", "open": "08:00", "close": "17:00", "closed": false },
+    { "day": "Thursday", "open": "08:00", "close": "17:00", "closed": false },
+    { "day": "Friday", "open": "08:00", "close": "18:00", "closed": false },
+    { "day": "Saturday", "open": "08:00", "close": "18:00", "closed": false },
+    { "day": "Sunday", "open": "09:00", "close": "17:00", "closed": false }
+  ],
+  "catering": {
+    "heading": "Catering & large orders",
+    "blurb": "Feeding a crowd? Tell us the headcount and date and we'll put a waffle spread together - office breakfasts, weddings, and everything in between."
+  },
+  "ordering": {
+    "payAtPickup": true,
+    "payOnline": false
+  },
+  "menu": [
+    {
+      "name": "Savory Waffles",
+      "note": "",
+      "items": [
+        { "name": "The Classic Fried Chicken", "price": "$11.50", "desc": "Buttermilk fried chicken thigh, maple-hot honey, pickles, waffle bun.", "image": "" },
+        { "name": "Bacon & Cheddar Melt", "price": "$10.00", "desc": "Applewood bacon, aged cheddar, scallion cream cheese, waffle bun.", "image": "" },
+        { "name": "The Reuben Waffle", "price": "$11.00", "desc": "Shaved pastrami, swiss, sauerkraut, thousand island, waffle bun.", "image": "" },
+        { "name": "Veggie Waffle Melt", "price": "$9.50", "desc": "Roasted mushroom, spinach, provolone, garlic aioli, waffle bun.", "image": "" }
+      ]
+    },
+    {
+      "name": "Sweet Waffles",
+      "note": "",
+      "items": [
+        { "name": "Strawberry Shortcake Waffle", "price": "$8.50", "desc": "Fresh strawberries, whipped cream, powdered sugar.", "image": "" },
+        { "name": "Nutella Banana Waffle", "price": "$8.00", "desc": "Nutella, sliced banana, toasted hazelnuts.", "image": "" },
+        { "name": "Cinnamon Sugar Waffle", "price": "$6.50", "desc": "Classic cinnamon-sugar dusted waffle, warm maple syrup.", "image": "" }
+      ]
+    },
+    {
+      "name": "Sides & Drinks",
+      "note": "",
+      "excludeAddOns": true,
+      "items": [
+        { "name": "Waffle Fries", "price": "$5.00", "desc": "Crispy waffle-cut fries, house seasoning salt.", "image": "" },
+        { "name": "Side Salad", "price": "$4.50", "desc": "Mixed greens, cherry tomato, house vinaigrette.", "image": "" },
+        { "name": "Fountain Soda", "price": "$3.00", "desc": "Coke, Diet Coke, Sprite, or root beer.", "image": "" },
+        { "name": "Bottled Water", "price": "$2.00", "desc": "", "image": "" }
+      ]
+    },
+    {
+      "name": "Extras",
+      "note": "",
+      "addOns": true,
+      "items": [
+        { "name": "Extra Bacon", "price": "$1.50", "desc": "", "image": "" },
+        { "name": "Extra Cheese", "price": "$1.00", "desc": "", "image": "" },
+        { "name": "Fried Egg", "price": "$1.50", "desc": "", "image": "" },
+        { "name": "Avocado", "price": "$2.00", "desc": "", "image": "" }
+      ]
+    }
+  ]
+}
