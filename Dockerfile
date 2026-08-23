@@ -12,7 +12,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci --omit=dev
 
-COPY server.js ./
+COPY server.js seo.js ./
 COPY public ./public
 
 ENV NODE_ENV=production
