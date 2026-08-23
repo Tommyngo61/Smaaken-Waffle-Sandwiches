@@ -215,6 +215,32 @@ function buildHead(c) {
       "</script>"
   );
 
+  // Counting, not tracking. No cookies, no storage, no identifiers - just
+  // "someone did this today on this site". That is what a renewal
+  // conversation needs, and it keeps the site out of consent-banner
+  // territory entirely.
+  //
+  // sendBeacon because a tap on a tel: link navigates away immediately and
+  // would cancel a normal fetch; beacons are handed to the browser to deliver
+  // after the page is gone. Wrapped so a failure here can never break a page.
+  if (SITE_ID) {
+    tags.push(
+      "<script>(function(){try{" +
+        "var S=" + JSON.stringify(SITE_ID) + ",U=" + JSON.stringify(CMS + "/api/public/track") + ";" +
+        "function t(e){try{var b=JSON.stringify({siteId:S,event:e});" +
+        "if(navigator.sendBeacon){navigator.sendBeacon(U,new Blob([b],{type:'application/json'}));}" +
+        "else{fetch(U,{method:'POST',headers:{'Content-Type':'application/json'},body:b,keepalive:true});}}catch(x){}}" +
+        "window.tcTrack=t;" +
+        "if(document.visibilityState!=='prerender'){t('view');}" +
+        "document.addEventListener('click',function(ev){" +
+        "var a=ev.target.closest&&ev.target.closest('a');if(!a||!a.href)return;" +
+        "if(a.href.indexOf('tel:')===0)t('call_tap');" +
+        "else if(/maps\\.google|google\\.[a-z.]+\\/maps|maps\\.apple/.test(a.href))t('directions_tap');" +
+        "},true);" +
+        "}catch(e){}})();</script>"
+    );
+  }
+
   // A real summary in the HTML for crawlers that never run the app. It goes
   // INSIDE #root, because React's createRoot().render() replaces that node's
   // children on mount - so a visitor never sees it, while a crawler that stops
